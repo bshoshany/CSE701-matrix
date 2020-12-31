@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build for debugging",
+            "command": "g++",
+            "args": [
+                "${workspaceFolder}/matrix_example.cpp",
+                "-o",
+                "${workspaceFolder}/matrix_example.exe",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-std=c++20",
+                "-ggdb3"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compile matrix_example.cpp using g++ with the -ggdb3 flag",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        }
+    ]
+}
